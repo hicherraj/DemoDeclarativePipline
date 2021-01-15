@@ -1,0 +1,31 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('SCM Chackout') {
+            steps {
+                echo 'From GetHub'
+                sh 'date'
+                echo 'SCM Completed'
+            }
+        }
+        stage('Maven Build') {
+            steps {
+                sh 'pwd'
+                echo 'Build Completed'
+            }
+        }
+        stage('Test') {
+            steps {
+                sh 'ps'
+                echo 'Test Completed'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                sh 'w'
+                echo 'Deploy Completed'
+            }
+        }
+    }
+}
